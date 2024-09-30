@@ -1,0 +1,28 @@
+.face-snap-card {
+  box-sizing: border-box;
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
+  img {
+    width: 100%;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+.snapped {
+  background-color: rgba(lightgreen, 0.4); // couleur du fond de la card
+  color: darkgreen; // coulour du texte de la card
+  button {
+    box-shadow: lightgreen 3px 3px 7px; // couleur de la bourdure du bouton
+    &:active {
+      box-shadow: lightgreen 0 0 5px; // couleur de la bordure lorsque l'user clique une seconde fois pour désactiver les élément au ci-dessus
+    }
+  }
+}

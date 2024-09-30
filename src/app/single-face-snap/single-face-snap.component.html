@@ -1,0 +1,13 @@
+<div class="face-snap-card" [ngClass]="{ snapped: userHasSnapped }"> <!-- la clé "snapped" est le nom de la classe CSS et userHasSnapped la condition qui doit etre rempli pour que la classe "snapped" s'applique -->
+    <h2>{{ faceSnap.title | uppercase }}</h2>
+    <button routerLink="/facesnaps">BACK</button>
+    @if (faceSnap.location) {
+        <p>Localisation : {{ faceSnap.location }}</p>
+    } @else {
+        <p>Localisation non spécifiée</p>
+    }
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <p>{{ faceSnap.description }}</p>
+    <p>FaceSnap créé le {{ faceSnap.createdAt | date: 'EEEE d MMMM y, à HH:mm' }} </p>
+    <button [ngStyle]="{ color: 'rgb(0, '+ faceSnap.snaps +', 0)' }" (click)="onSnap()">{{ faceSnap.snaps }} ❤️</button> <!-- La clé color est une valeur CSS et la valeur rbg l'action -->
+</div>
